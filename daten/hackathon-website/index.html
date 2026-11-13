@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AKKI Hackathon 2026 — KI Use Cases in der Orthopädie und Unfallchirurgie</title>
+<meta name="description" content="AKKI Hackathon 2026: 27.–28.11.2026 im Kesselhaus Berlin. KI Use Cases in der Orthopädie und Unfallchirurgie.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 104'%3E%3Cg stroke='%2363B4E6' stroke-width='7' stroke-linecap='round' stroke-linejoin='round' fill='none'%3E%3Cpath d='M50,14 L33,52 L18,90'/%3E%3Cpath d='M50,14 L67,52 L82,90'/%3E%3Cline x1='33' y1='52' x2='67' y2='52'/%3E%3C/g%3E%3Ccircle cx='50' cy='52' r='6' fill='%2345E9DA'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="akkiGradLight" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#63B4E6"/><stop offset="1" stop-color="#45E9DA"/></linearGradient>
+    <linearGradient id="agGradLight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8FD1F2"/><stop offset="1" stop-color="#57B6E8"/></linearGradient>
+  </defs>
+</svg>
+
+<nav class="nav">
+  <div class="nav__brand">
+    <svg viewBox="0 0 100 104" height="34" fill="none" role="img" aria-label="AKKI Logo">
+      <g stroke="url(#akkiGradLight)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M50,14 L33,52 L18,90"></path>
+        <path d="M50,14 L67,52 L82,90"></path>
+        <line x1="33" y1="52" x2="67" y2="52"></line>
+      </g>
+      <circle cx="50" cy="14" r="11" fill="#45E9DA" opacity="0.24"></circle>
+      <circle cx="50" cy="52" r="9.5" fill="#45E9DA" opacity="0.24"></circle>
+      <circle cx="18" cy="90" r="5.5" fill="#8FD4F0"></circle>
+      <circle cx="82" cy="90" r="5.5" fill="#8FD4F0"></circle>
+      <circle cx="33" cy="52" r="5" fill="#63B4E6"></circle>
+      <circle cx="67" cy="52" r="5" fill="#63B4E6"></circle>
+      <circle cx="50" cy="52" r="5.5" fill="#45E9DA"></circle>
+      <circle cx="50" cy="14" r="6.5" fill="#45E9DA"></circle>
+    </svg>
+    <strong>AKKI</strong>
+  </div>
+  <button id="nav-toggle" aria-label="Menu">☰</button>
+  <ul class="nav__links" id="nav-links">
+    <li><a href="#agenda" data-i18n="nav.agenda">Ablauf</a></li>
+    <li><a href="#rules" data-i18n="nav.rules">Rahmenbedingungen</a></li>
+    <li><a href="#usecases" data-i18n="nav.usecases">Use Cases</a></li>
+    <li><a href="#location" data-i18n="nav.location">Location</a></li>
+    <li><a href="#register" data-i18n="nav.register">Anmeldung</a></li>
+  </ul>
+  <div class="nav__actions">
+    <button id="lang-toggle">EN</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="hero__logos">
+      <div class="hero__logo-item">
+        <svg viewBox="0 0 100 104" height="96" fill="none" role="img" aria-label="AKKI Logo">
+          <g stroke="url(#akkiGradLight)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M50,14 L33,52 L18,90"></path>
+            <path d="M50,14 L67,52 L82,90"></path>
+            <line x1="33" y1="52" x2="67" y2="52"></line>
+          </g>
+          <circle cx="50" cy="14" r="11" fill="#45E9DA" opacity="0.24"></circle>
+          <circle cx="50" cy="52" r="9.5" fill="#45E9DA" opacity="0.24"></circle>
+          <circle cx="18" cy="90" r="5.5" fill="#8FD4F0"></circle>
+          <circle cx="82" cy="90" r="5.5" fill="#8FD4F0"></circle>
+          <circle cx="33" cy="52" r="5" fill="#63B4E6"></circle>
+          <circle cx="67" cy="52" r="5" fill="#63B4E6"></circle>
+          <circle cx="50" cy="52" r="5.5" fill="#45E9DA"></circle>
+          <circle cx="50" cy="14" r="6.5" fill="#45E9DA"></circle>
+        </svg>
+        <span class="hero__logo-caption" data-i18n="hero.logo_akki_caption">Arbeitskreis KI</span>
+      </div>
+      <div class="hero__logo-item">
+        <svg viewBox="0 0 150 100" height="82" fill="none" role="img" aria-label="AG Digitalisierung Logo">
+          <circle cx="46" cy="50" r="33" fill="none" stroke="#57B6E8" stroke-width="6" stroke-dasharray="3 9.4" stroke-linecap="round"></circle>
+          <circle cx="46" cy="17" r="5" fill="#8FD1F2"></circle>
+          <circle cx="79" cy="50" r="5" fill="#8FD1F2"></circle>
+          <circle cx="46" cy="83" r="5" fill="#57B6E8"></circle>
+          <circle cx="13" cy="50" r="5" fill="#57B6E8"></circle>
+          <path stroke="url(#agGradLight)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" d="M78,22 L78,60 A22,22 0 0 0 122,60 L122,22"></path>
+        </svg>
+        <span class="hero__logo-caption" data-i18n="hero.logo_ag_caption">Arbeitsgemeinschaft Digitalisierung</span>
+      </div>
+    </div>
+    <span class="eyebrow" data-i18n="hero.eyebrow">AKKI Hackathon 2026</span>
+    <h1 data-i18n="hero.title">KI Use Cases in der Orthopädie und Unfallchirurgie</h1>
+    <p class="hero__subtitle" data-i18n="hero.subtitle">Zwei Tage, sieben Use Cases, Claude Code als Werkzeug.</p>
+    <div class="hero__meta">
+      <span><span data-i18n="hero.date_label">Termin</span>: <strong data-i18n="hero.date_value">27.–28.11.2026</strong></span>
+      <span><span data-i18n="hero.location_label">Ort</span>: <strong data-i18n="hero.location_value">Kesselhaus Berlin</strong></span>
+    </div>
+    <a href="#register" class="btn btn--primary" data-i18n="hero.cta">Jetzt anmelden</a>
+  </div>
+</header>
+
+<section class="section" id="agenda">
+  <div class="container">
+    <span class="eyebrow" data-i18n="nav.agenda">Ablauf</span>
+    <h2 data-i18n="agenda.heading">Ablauf</h2>
+    <div class="agenda-columns">
+      <div>
+        <h3 data-i18n="agenda.day1">Tag 1 — Freitag, 27.11.2026</h3>
+        <table class="agenda-table">
+          <tr><td>10:00</td><td data-i18n="agenda.d1.r1">Vorstellungsrunde / Einführung</td></tr>
+          <tr><td>10:45</td><td data-i18n="agenda.d1.r2">Gruppenlosung (Teameinteilung)</td></tr>
+          <tr><td>11:00</td><td data-i18n="agenda.d1.r3">Beginn Hackathon</td></tr>
+          <tr><td>13:00</td><td data-i18n="agenda.d1.r4">Mittagspause</td></tr>
+          <tr><td>13:30</td><td data-i18n="agenda.d1.r5">Hackathon (Fortsetzung)</td></tr>
+          <tr><td>ab Abend</td><td data-i18n="agenda.d1.r7">Hackathon Night (Pizza &amp; Bier werden gestellt) — bis ultimo</td></tr>
+        </table>
+      </div>
+      <div>
+        <h3 data-i18n="agenda.day2">Tag 2 — Samstag, 28.11.2026</h3>
+        <table class="agenda-table">
+          <tr><td>09:00</td><td data-i18n="agenda.d2.r1">Begrüßung, Beginn Hackathon Tag 2</td></tr>
+          <tr><td>13:00</td><td data-i18n="agenda.d2.r2">Mittagspause</td></tr>
+          <tr><td>14:00</td><td data-i18n="agenda.d2.r3">Vorstellungsrunde der Projekte (15 Min. pro Team)</td></tr>
+          <tr><td>16:00</td><td data-i18n="agenda.d2.r4">Verabschiedung</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="rules">
+  <div class="container">
+    <span class="eyebrow" data-i18n="nav.rules">Rahmenbedingungen</span>
+    <h2 data-i18n="rules.heading">Rahmenbedingungen</h2>
+    <div class="rules-grid">
+      <div class="rules-grid__item">
+        <span class="eyebrow" data-i18n="rules.team_label">Team</span>
+        <p data-i18n="rules.team_value">3–5 Personen …</p>
+      </div>
+      <div class="rules-grid__item">
+        <span class="eyebrow" data-i18n="rules.tool_label">Werkzeug</span>
+        <p data-i18n="rules.tool_value">Claude-Code-Zugriff …</p>
+      </div>
+      <div class="rules-grid__item">
+        <span class="eyebrow" data-i18n="rules.structure_label">Struktur</span>
+        <p data-i18n="rules.structure_value">3 Blöcke …</p>
+      </div>
+      <div class="rules-grid__item">
+        <span class="eyebrow" data-i18n="rules.audience_label">Zielgruppe</span>
+        <p data-i18n="rules.audience_value">Medizinischer Hintergrund im Team ist Voraussetzung.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="usecases">
+  <div class="container">
+    <span class="eyebrow" data-i18n="nav.usecases">Use Cases</span>
+    <h2 data-i18n="usecases.heading">Die 9 Use Cases</h2>
+    <div class="usecases-grid" id="usecases-grid"></div>
+    <p class="usecases-note" data-i18n="usecases.note">Bis zum Hackathon können sich an den Themen noch Änderungen ergeben.</p>
+  </div>
+</section>
+
+<section class="section section--alt" id="location">
+  <div class="container">
+    <span class="eyebrow" data-i18n="nav.location">Location</span>
+    <h2 data-i18n="location.heading">Location</h2>
+    <div class="location-grid">
+      <img class="location-photo" src="assets/kesselhaus.jpg" alt="Kesselhaus Berlin">
+      <div>
+        <p data-i18n="location.text">Wir hacken im Kesselhaus in Berlin-Lichtenberg.</p>
+        <p><strong>BG Klinikum Unfallkrankenhaus Berlin</strong><br>Kesselhaus, Nördlicher Anbau · Warener Str. 7, 12683 Berlin</p>
+        <div class="location-partner">
+          <span class="eyebrow location-partner__label" data-i18n="location.partner_label">Veranstalter</span>
+          <div class="location-partner__logos">
+            <img class="location-partner__logo--tint" src="assets/ukb-logo.svg" alt="BG Klinikum Unfallkrankenhaus Berlin">
+            <img src="assets/helliwood-logo.png" alt="Helliwood media &amp; education im fjs e.V.">
+          </div>
+          <p class="location-partner__names" data-i18n="location.partner_names">BG Klinikum Unfallkrankenhaus Berlin &amp; Helliwood media &amp; education im fjs e.V.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="register">
+  <div class="container">
+    <span class="eyebrow" data-i18n="nav.register">Anmeldung</span>
+    <h2 data-i18n="register.heading">Anmeldung</h2>
+    <p data-i18n="register.info">Max. 25 Teilnehmer:innen · Anmeldung auch kurzfristig noch möglich.</p>
+    <form id="register-form-wrapper" class="contact-form" novalidate
+          action="https://formspree.io/f/mjgnnyvk" method="POST">
+      <div>
+        <label for="reg-name" data-i18n="register.name_label">Name</label>
+        <input type="text" id="reg-name" name="name" required>
+        <span class="field-error" id="reg-name-error" hidden data-i18n="register.name_required">Bitte gib deinen Namen an.</span>
+      </div>
+      <div>
+        <label for="reg-email" data-i18n="register.email_label">E-Mail</label>
+        <input type="email" id="reg-email" name="email" required>
+        <span class="field-error" id="reg-email-error" hidden data-i18n="register.email_invalid">Bitte gib eine gültige E-Mail-Adresse an.</span>
+      </div>
+      <div>
+        <label for="reg-org" data-i18n="register.org_label">Organisation / Klinik (optional)</label>
+        <input type="text" id="reg-org" name="organisation">
+      </div>
+      <div>
+        <label for="reg-message" data-i18n="register.message_label">Nachricht (optional)</label>
+        <textarea id="reg-message" name="message"></textarea>
+      </div>
+      <button type="submit" class="btn btn--primary" data-i18n="register.submit">Anmeldung absenden</button>
+      <p id="register-error" class="register-error" hidden data-i18n="register.error">Das hat leider nicht geklappt. Bitte versuch's gleich nochmal.</p>
+    </form>
+
+    <div id="register-success" class="register-success" hidden>
+      <p class="register-success__heading" data-i18n="register.success_heading">🎉 Danke für deine Anmeldung!</p>
+      <p data-i18n="register.success_body">Wir haben deine Anmeldung erhalten und melden uns bei dir.</p>
+    </div>
+
+    <p class="register-puzzle-notice" data-i18n="register.puzzle_notice">Lust auf eine kleine Challenge? Ganz freiwillig: Knack die Materialschleuse.</p>
+
+    <div class="minigame" id="minigame-section">
+      <h3 data-i18n="minigame.heading">🔐 Die Materialschleuse</h3>
+      <p data-i18n="minigame.intro">Vier Ebenen, ein Wächter …</p>
+
+      <nav class="minigame-levels" id="minigame-levels" aria-label="Level"></nav>
+
+      <div class="minigame-briefing">
+        <p class="minigame-defense" id="minigame-defense"></p>
+      </div>
+
+      <div class="minigame-log" id="minigame-log" aria-live="polite"></div>
+
+      <form id="minigame-chat-form">
+        <input type="text" id="minigame-chat-input" data-i18n-placeholder="minigame.chat_placeholder" placeholder="Schreib dem Wächter eine Nachricht …" autocomplete="off" maxlength="300">
+        <button type="submit" class="btn" data-i18n="minigame.chat_send">Senden</button>
+      </form>
+
+      <div class="minigame-guess">
+        <form id="minigame-guess-form">
+          <input type="text" id="minigame-guess-input" data-i18n-placeholder="minigame.guess_placeholder" placeholder="Dein Passwort-Tipp" autocomplete="off">
+          <button type="submit" class="btn btn--primary" data-i18n="minigame.guess_submit">Passwort einlösen</button>
+        </form>
+        <p class="minigame-feedback" id="minigame-guess-feedback"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" id="site-footer">
+  <div class="container">
+    <p><span data-i18n="footer.partner_label">Kooperationspartner</span>: BG Unfallklinik Berlin, Helliwood, Charité Berlin</p>
+    <p data-i18n="footer.rights">AKKI — Arbeitskreis Künstliche Intelligenz</p>
+
+    <div class="legal-section" id="legal-section">
+      <h3 data-i18n="legal.impressum_heading">Impressum</h3>
+      <p data-i18n="legal.impressum_body">Angaben gemäß § 5 TMG: [Platzhalter]</p>
+      <h3 data-i18n="legal.datenschutz_heading">Datenschutz</h3>
+      <h4 data-i18n="legal.datenschutz_s1_heading">Verantwortliche Stelle</h4>
+      <p data-i18n="legal.datenschutz_s1_body">[Platzhalter]</p>
+      <h4 data-i18n="legal.datenschutz_s2_heading">Hosting und Server-Daten</h4>
+      <p data-i18n="legal.datenschutz_s2_body">[Platzhalter]</p>
+      <h4 data-i18n="legal.datenschutz_s3_heading">Anmeldeformular (Formspree)</h4>
+      <p data-i18n="legal.datenschutz_s3_body">[Platzhalter]</p>
+      <h4 data-i18n="legal.datenschutz_s4_heading">Minigame-Chat (Google Gemini API)</h4>
+      <p data-i18n="legal.datenschutz_s4_body">[Platzhalter]</p>
+      <h4 data-i18n="legal.datenschutz_s5_heading">Lokale Speicherung</h4>
+      <p data-i18n="legal.datenschutz_s5_body">[Platzhalter]</p>
+      <h4 data-i18n="legal.datenschutz_s6_heading">Deine Rechte</h4>
+      <p data-i18n="legal.datenschutz_s6_body">[Platzhalter]</p>
+    </div>
+  </div>
+</footer>
+
+<script src="scripts/content.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/minigame.js"></script>
+</body>
+</html>
