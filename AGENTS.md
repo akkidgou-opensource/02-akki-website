@@ -16,9 +16,9 @@ Lies zuerst `README.md`, damit du Ziel und Aufbau des Projekts kennst. Antworte 
 - Klärt vor jedem Arbeitsschritt kurz das Ziel, die zuständige Person und die betroffenen Dateien. Haltet fest, wer Inhalte liefert, wer den Coding-Agenten bedient und wer den fertigen Stand prüft.
 - Arbeitet in einem eigenen Arbeitszweig (Branch), der von `main` ausgeht. Ändert `main` nie direkt.
 - Teilt Aufgaben so auf, dass nicht mehrere Personen gleichzeitig dieselbe Datei bearbeiten. Besonders bei `public/index.html` gibt es immer nur eine zuständige Person zur selben Zeit.
-- Haltet Änderungen klein und verständlich. Speichert zusammengehörige Änderungen in einem Commit und öffnet für die Prüfung einen Pull Request (PR).
+- Haltet Änderungen klein und verständlich. Speichert zusammengehörige Änderungen in einem Commit und ladet den Branch nach Prüfung hoch. Der Agent bereitet Titel und Beschreibung vor. Das Team öffnet den Pull Request (PR) selbst auf GitHub.
 - Eine andere Person aus dem Team prüft den PR: Stimmen Inhalt und Umfang? Funktionieren Links und Darstellung? Sind keine Schlüssel oder echten Patientendaten enthalten?
-- Setzt Änderungswünsche im selben Branch um. Die zuständige menschliche Person im Team entscheidet über das Zusammenführen (Merge) in `main`.
+- Setzt Änderungswünsche im selben Branch um. Die zuständige Person im Team entscheidet über das Zusammenführen (Merge) in `main`. Der Agent darf den Merge erst auf ihre ausdrückliche Anweisung ausführen, sofern er dazu berechtigt ist.
 - Wenn Aufgabe, Zuständigkeit, medizinischer Inhalt oder gewünschte Änderung unklar ist, frage nach, bevor du weiterarbeitest.
 
 ## Arbeiten mit Coding-Agenten

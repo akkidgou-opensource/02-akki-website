@@ -20,13 +20,13 @@ Die Website macht den Arbeitskreis sichtbar und zeigt, was ein Team in zwei Tage
 
 1. Öffnet das [Ausgangs-Repository](https://github.com/akkidgou-opensource/02-akki-website) und meldet euch bei GitHub an.
 2. Erstellt über **Fork** eure eigene Team-Kopie des Repositories. Eine Person verwaltet diese Kopie und lädt die anderen Teammitglieder als Mitarbeitende ein.
-3. Klont die Team-Kopie auf den Rechner, auf dem ihr mit Claude Code oder Codex arbeitet. Ladet nicht einfach ein ZIP herunter: Ein geklontes Repository kann Änderungen speichern und für Pull Requests verwenden.
+3. Arbeitet mit Claude Code im geklonten Team-Fork oder wählt den Team-Fork in ChatGPT mit Codex aus. Wie ihr euer eigenes GitHub-Konto verbindet, steht in der Anleitung unten.
 4. Öffnet `SPICKZETTEL.md` und beginnt mit Block 1.
 5. Die Schritt-für-Schritt-Anleitung steht in [GITHUB_ANLEITUNG.md](./GITHUB_ANLEITUNG.md).
 
 ## Zusammenarbeit im Team
 
-Verteilt vor dem Bauen die Aufgaben und benennt pro Datei eine zuständige Person. Für jede unabhängig prüfbare Änderung wird ein eigener Branch erstellt und ein Pull Request geöffnet. So kann das Team Änderungen ansehen, Rückfragen stellen und sie erst danach in `main` übernehmen.
+Verteilt vor dem Bauen die Aufgaben und benennt pro Datei eine zuständige Person. Für jede unabhängig prüfbare Änderung wird ein eigener Branch erstellt und auf GitHub im Browser ein Pull Request geöffnet. So kann das Team Änderungen ansehen, Rückfragen stellen und sie erst danach in `main` übernehmen.
 
 ## Was in diesem Repo liegt
 

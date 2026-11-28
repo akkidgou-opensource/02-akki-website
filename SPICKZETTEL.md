@@ -24,11 +24,11 @@ Bleiben 30 Minuten Puffer.
 
 ## Block 1 · Team und Setup
 
-Öffnet die Team-Kopie des Repositories in Claude Code oder Codex und gebt diesen Prompt ein:
+Öffnet den Team-Fork in Claude Code oder ChatGPT mit Codex. Falls der Fork noch fehlt, folgt Schritt 2 in der [GitHub-Anleitung](GITHUB_ANLEITUNG.md). Gebt dann diesen Prompt ein:
 ```
 Lies zuerst README.md und AGENTS.md. Dieses Projekt ist ein Prototyp für den AKKI Hackathon. Prüfe, ob Node.js ab Version 20 installiert ist, und erkläre in drei einfachen Sätzen, wie wir vorgehen. Fasse die Teamregeln zusammen: Aufgaben verteilen, pro Datei eine zuständige Person benennen, Änderungen auf einem Branch machen und vor dem Merge prüfen lassen.
 ```
-**Fertig, wenn:** Node.js passt, die Team-Kopie auf dem Rechner liegt und alle wissen, wer Inhalte erstellt, wer den Agenten bedient und wer PRs prüft.
+**Fertig, wenn:** Node.js passt, der Agent auf den Team-Fork zugreifen kann und alle wissen, wer Inhalte erstellt, wer den Agenten bedient und wer PRs prüft.
 
 ## Block 2 · Inhalte und Struktur (ohne Code)
 
@@ -84,7 +84,7 @@ Prüfe alle Seiten auf tote Links, fehlende Seitentitel, fehlende Beschreibung f
 
 ## Block 8 · Feinschliff, Demo, Pitch
 
-- Prüft den letzten Stand und öffnet für die fertige Änderung einen Pull Request.
+- Prüft den letzten Stand und lasst euch einen Titel und eine kurze Beschreibung vorschlagen. Öffnet den Pull Request selbst auf GitHub.
 - Eine andere Person prüft den PR und testet die Website. Die zuständige Person führt den Merge erst danach aus.
 - Stellt den geprüften Stand online und testet die URL auf zwei Geräten.
 - Macht Screenshots als Backup.

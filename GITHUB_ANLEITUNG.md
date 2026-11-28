@@ -1,6 +1,6 @@
 # Gemeinsam mit GitHub arbeiten
 
-Diese Anleitung führt euch vom Fork bis zum Pull Request. Ein Fork ist eure eigene Kopie des Ausgangs-Repositories. So könnt ihr sicher daran arbeiten und Änderungen erst nach einer Prüfung zusammenführen.
+Kopiert die Prompts in Claude Code oder ChatGPT mit Codex. Der Agent hilft euch beim Arbeiten im Projekt. Die Anmeldung, Einladungen und Pull Requests erledigt ihr selbst auf GitHub.
 
 ## In drei Sätzen
 
@@ -11,8 +11,8 @@ Diese Anleitung führt euch vom Fork bis zum Pull Request. Ein Fork ist eure eig
 ## Was ihr braucht
 
 - Ein kostenloses GitHub-Konto für die Person, die die Team-Kopie anlegt
-- Einen Rechner mit dem Projektordner und eurem Coding-Agenten (Claude Code oder Codex)
-- GitHub Desktop oder GitHub CLI (`gh`); wenn etwas fehlt, kann euch ein:e Mentor:in helfen
+- Ein eigenes GitHub-Konto für jedes Teammitglied, das Änderungen hochladen oder prüfen soll
+- Claude Code oder ChatGPT mit Codex
 
 ## 1 · Eine Team-Kopie anlegen
 
@@ -25,19 +25,28 @@ Arbeitet als Team in dieser gemeinsamen Kopie. Eine persönliche Fork-Kopie pro 
 
 ## 2 · Team-Kopie auf den Rechner holen
 
-Nutzt in GitHub Desktop **File → Clone repository** und wählt eure Team-Kopie aus. Öffnet anschließend genau diesen Ordner in Claude Code oder Codex.
+**Claude Code:** Öffnet ein Terminal. Ersetzt `TEAMKONTO` im Prompt durch das Konto, dem der Fork gehört.
 
-Wenn ihr die GitHub CLI nutzt, meldet euch einmal an:
-```bash
-gh auth login
 ```
-Wählt **GitHub.com**, **HTTPS** und **Login with a web browser**. Bestätigt die Anmeldung im Browser. Teilt niemals euer Passwort oder einen Zugangsschlüssel mit einem Coding-Agenten.
+Hilf mir, den Team-Fork TEAMKONTO/02-akki-website zu klonen. Prüfe zuerst, ob Git da ist. Falls ich mich anmelden muss, erkläre mir den nächsten Schritt und warte. Sag mir danach, welchen Ordner ich öffnen soll.
+```
 
-Danach könnt ihr die Team-Kopie laden:
-```bash
-gh repo clone TEAMKONTO/02-akki-website
+**ChatGPT mit Codex:** Wählt den Team-Fork in eurer verbundenen GitHub-Umgebung aus. Wenn ihr den Fork nicht seht, prüft die Einrichtung unten.
+
+### Erweitert · Mit dem eigenen GitHub-Konto in ChatGPT arbeiten
+
+Jedes Teammitglied kann sein eigenes GitHub-Konto über die GitHub-Verbindung in ChatGPT verknüpfen. Für die Arbeit mit dem **ChatGPT Codex Connector** richtet ihr beide Seiten ein:
+
+1. **Wer das Repository oder den Fork verwaltet:** Installiert die GitHub-App **ChatGPT Codex Connector** beim Konto oder bei der Organisation, der das Repository gehört. Gebt der App Zugriff auf das Repository oder den Fork, in dem das Team arbeitet.
+2. **Wer mitarbeitet:** Nehmt die Einladung mit eurem eigenen GitHub-Konto an. Richtet den **ChatGPT Codex Connector** auch für euer Konto ein und verbindet genau dieses Konto mit ChatGPT.
+
+Eine Einladung allein gibt eurem Agenten keinen Schreibzugriff. Wenn der Agent den Fork nicht sieht oder nichts ändern kann, prüft die App auf beiden Seiten, das ausgewählte Repository und eure Rechte. Siehe auch [GitHub-Hilfe zur App-Installation](https://docs.github.com/en/apps/using-github-apps/installing-a-github-app-from-a-third-party).
+
 ```
-Ersetzt `TEAMKONTO` durch den GitHub-Namen der Person, die den Fork verwaltet.
+Prüfe, ob du auf TEAMKONTO/02-akki-website zugreifen kannst. Sag mir, ob du den Branch main lesen und ob du im Team-Fork schreiben kannst. Falls du das nicht feststellen kannst, sag mir, was ich in GitHub prüfen soll.
+```
+
+Je nach Zugriff kann der Agent Branches anlegen, Änderungen speichern und hochladen. Nach dem Review kann er auf ausdrückliche Anweisung auch beim Merge helfen, sofern die Verbindung und die Regeln des Repositories das erlauben. Sonst führt die zuständige Person den Merge in GitHub aus.
 
 ## 3 · Aufgaben und Dateien verteilen
 
@@ -63,7 +72,7 @@ Ein Branch sollte eine zusammenhängende Änderung enthalten. Wenn ihr an einer 
 
 ## 5 · Änderung speichern und hochladen
 
-Wenn ein sinnvoller Zwischenstand fertig ist, prüft die Änderung und speichert sie. In GitHub Desktop heißt das **Commit** (Änderung festhalten) und **Push** (Branch zu GitHub hochladen).
+Wenn ein sinnvoller Zwischenstand fertig ist, lasst euch die Änderungen zeigen. **Commit** heißt, den Stand festzuhalten. **Push** heißt, den Branch zu GitHub hochzuladen.
 
 Prompt für euren Coding-Agenten:
 ```
@@ -74,7 +83,7 @@ Gebt dem Commit eine kurze Beschreibung, zum Beispiel `Kontaktseite ergänzt`. L
 
 ## 6 · Pull Request öffnen und prüfen lassen
 
-Öffnet eure Team-Kopie auf GitHub. GitHub bietet nach dem Hochladen meist **Compare & pull request** an. Wählt:
+Öffnet den Pull Request selbst im Browser. Manche GitHub-Verbindungen können in eurem Repository keinen PR anlegen, etwa wenn dem ChatGPT Codex Connector dort die Berechtigung fehlt. Der Agent kann euch Titel und Beschreibung vorbereiten. Öffnet eure Team-Kopie auf GitHub, klickt auf **Compare & pull request** oder geht zu **Pull requests → New pull request**. Wählt:
 
 - **base:** eure Team-Kopie und `main`
 - **compare:** euren Arbeits-Branch, zum Beispiel `feature/kontaktseite`
@@ -89,12 +98,12 @@ Eine andere Person aus dem Team prüft den PR und probiert die Änderung aus. Di
 
 ## 7 · Zum Ausgangs-Repository beitragen
 
-Wenn ihr eine Verbesserung für alle Teams vorbereitet habt, könnt ihr dafür einen PR an das Ausgangs-Repository schicken:
+Wenn ihr eine Verbesserung für alle Teams vorbereitet habt, öffnet den PR im Ausgangs-Repository im Browser. Wählt **compare across forks** und setzt:
 
 - **base:** `akkidgou-opensource/02-akki-website`, Branch `main`
 - **head:** euer Team-Fork und euer Arbeits-Branch
 
-Prüft vor dem Öffnen, dass der PR nur die gemeinsam vereinbarte Änderung enthält. Das Team prüft den PR, bevor es ihn abschickt.
+Prüft vor dem Öffnen, dass der PR nur die gemeinsam vereinbarte Änderung enthält. Das Team prüft die Änderungen und die Beschreibung, bevor es auf **Create pull request** klickt.
 
 ## Wenn es hakt
 
@@ -102,8 +111,8 @@ Prüft vor dem Öffnen, dass der PR nur die gemeinsam vereinbarte Änderung enth
 |---|---|
 | „Permission denied“ oder „403“ | Prüft, ob ihr mit dem richtigen GitHub-Konto angemeldet seid und die Einladung zur Team-Kopie angenommen habt. |
 | „rejected“ oder „non-fast-forward“ | Holt zuerst den aktuellen Stand. Überschreibt oder löscht keine Änderungen, die ihr nicht geprüft habt. Fragt eine:n Mentor:in, wenn ihr unsicher seid. |
-| `gh: command not found` | Nutzt GitHub Desktop oder bittet eine:n Mentor:in um Hilfe bei der Installation. |
-| Der Agent fragt nach Passwort oder Zugangsschlüssel | Gebt sie nicht ein. Nutzt `gh auth login` und bestätigt die Anmeldung selbst im Browser. |
+| Der Agent sieht den Team-Fork nicht | Prüft die Einladung, das verbundene Konto und den App-Zugriff auf den Fork wie in Schritt 2. |
+| Der Agent fragt nach Passwort oder Zugangsschlüssel | Gebt sie nicht ein. Meldet euch selbst im Browser an. |
 | `.env` oder ein Schlüssel wurde hochgeladen | Informiert sofort eine:n Mentor:in. Der Schlüssel muss gesperrt und ersetzt werden; Löschen allein reicht nicht. |
 
 ## Drei Regeln
